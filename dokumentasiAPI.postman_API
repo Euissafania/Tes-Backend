@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "77188660-a1b0-461d-a286-89f9a1b6db0c",
+		"name": "Tes_BE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31577855"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/api/books?author=Markus&title=Thief&limit=5&page=1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/books?author=Markus&title=Thief&limit=5&page=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "Markus"
+						},
+						{
+							"key": "title",
+							"value": "Thief"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/members",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"saf\",\r\n    \"email\": \"saf@email.com\",\r\n    \"phone\": \"081234567562\",\r\n    \"address\": \"Jln Bundaran\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/members",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"members"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/borrowings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"book_id\"   : \"0074c502-c926-42ae-a5ea-d81f1fbe3c1f\",\r\n    \"member_id\" : \"04f90417-b909-11ef-943d-6c02e0b5146c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/borrowings",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"borrowings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/borrowings/336bf3b7-b904-11ef-943d-6c02e0b5146c/return",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/borrowings/3038d55e-b909-11ef-943d-6c02e0b5146c/return",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"borrowings",
+						"3038d55e-b909-11ef-943d-6c02e0b5146c",
+						"return"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/members/4d16819b-b6ee-4c14-a04f-f9218d9d2189/borrowings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/members/04f90417-b909-11ef-943d-6c02e0b5146c/borrowings",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"members",
+						"04f90417-b909-11ef-943d-6c02e0b5146c",
+						"borrowings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
